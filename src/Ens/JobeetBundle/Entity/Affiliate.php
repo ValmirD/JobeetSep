@@ -4,7 +4,6 @@ namespace Ens\JobeetBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
-
 /**
  * Affiliate
  *

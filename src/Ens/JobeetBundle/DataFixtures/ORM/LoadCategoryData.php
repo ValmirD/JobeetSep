@@ -1,4 +1,5 @@
 <?php
+
 namespace Ens\JobeetBundle\DataFixtures\ORM;
 
 use Doctrine\Common\Persistence\ObjectManager;

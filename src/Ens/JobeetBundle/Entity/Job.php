@@ -6,7 +6,6 @@ use Doctrine\ORM\Mapping as ORM;
 use Ens\JobeetBundle\Utils\Jobeet as Jobeet;
 use Symfony\Component\Validator\Constraints as Assert;
 
-
 /**
  * Job
  *
