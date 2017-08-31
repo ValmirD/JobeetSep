@@ -5,6 +5,7 @@ namespace Ens\JobeetBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Ens\JobeetBundle\Utils\Jobeet;
 
+
 /**
  * Category
  *

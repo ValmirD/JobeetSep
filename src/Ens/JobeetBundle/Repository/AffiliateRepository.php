@@ -2,6 +2,7 @@
 
 namespace Ens\JobeetBundle\Repository;
 
+
 /**
  * AffiliateRepository
  *
