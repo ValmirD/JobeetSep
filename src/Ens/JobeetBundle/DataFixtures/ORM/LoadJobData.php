@@ -12,7 +12,6 @@ namespace Ens\JobeetBundle\DataFixtures\ORM;
 		public function load(ObjectManager $em) {
 			$job_sensio_labs = new Job ();
 			$job_sensio_labs->setCategoryId($em->merge($this->getReference('category-programming')));
-			$job_sensio_labs->setLevelId($em->merge($this->getReference('high')));
 			$job_sensio_labs->setType ( 'full-time' );
 			$job_sensio_labs->setCompany ( 'Sensio Labs' );
 			$job_sensio_labs->setLogo ( 'sensio-labs.gif' );
@@ -30,7 +29,6 @@ namespace Ens\JobeetBundle\DataFixtures\ORM;
 			
 			$job_extreme_sensio = new Job ();
 			$job_extreme_sensio->setCategoryId($em->merge($this->getReference('category-design')));
-			$job_extreme_sensio->setLevelId($em->merge($this->getReference('low')));
 			$job_extreme_sensio->setType ( 'part-time' );
 			$job_extreme_sensio->setCompany ( 'Extreme Sensio' );
 			$job_extreme_sensio->setLogo ( 'extreme-sensio.gif' );
@@ -49,7 +47,6 @@ namespace Ens\JobeetBundle\DataFixtures\ORM;
 			
 			$job_expired = new Job();
 			$job_expired->setCategoryId($em->merge($this->getReference('category-programming')));
-			$job_expired->setLevelId($em->merge($this->getReference('medium')));
 			$job_expired->setType('full-time');
 			$job_expired->setCompany('Sensio Labs');
 			$job_expired->setLogo('sensio-labs.gif');
@@ -72,7 +69,6 @@ namespace Ens\JobeetBundle\DataFixtures\ORM;
 			{
 				$job = new Job();
 				$job->setCategoryId($em->merge($this->getReference('category-programming')));
-				$job->setLevelId($em->merge($this->getReference('low')));
 				$job->setType('full-time');
 				$job->setCompany('Company '.$i);
 				$job->setPosition('Web Developer');

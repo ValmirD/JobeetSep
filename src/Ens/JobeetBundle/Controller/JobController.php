@@ -53,7 +53,6 @@ class JobController extends Controller {
         $job = new Job ();
         $job->setType('full-time');
 
-        $job->setLevelId(27);
         $form = $this->createForm('Ens\JobeetBundle\Form\JobType', $job);
         $form->handleRequest($request);
 
