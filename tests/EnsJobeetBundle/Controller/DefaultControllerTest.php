@@ -1,5 +1,4 @@
 <?php
-
 namespace Ens\JobeetBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
