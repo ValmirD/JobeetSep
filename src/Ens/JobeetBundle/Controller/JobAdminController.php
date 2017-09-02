@@ -60,5 +60,4 @@ class JobAdminController extends Controller {
 
         return new RedirectResponse($this->admin->generateUrl('list', $this->admin->getFilterParameters()));
     }
-
 }
