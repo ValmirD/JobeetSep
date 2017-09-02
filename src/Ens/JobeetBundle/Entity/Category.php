@@ -193,5 +193,4 @@ class Category {
     public function getMoreJobs() {
         return $this->more_jobs;
     }
-
 }

@@ -77,7 +77,7 @@ class JobController extends Controller {
         return $this->render('EnsJobeetBundle:Job:new.html.twig', array(
                     'job' => $job,
                     'form' => $form->createView()
-                ));
+        ));
     }
 
     /**
@@ -147,7 +147,7 @@ class JobController extends Controller {
                     'job' => $job,
                     'edit_form' => $editForm->createView(),
                     'delete_form' => $deleteForm->createView()
-                ));
+        ));
     }
 
     /**
