@@ -1,4 +1,5 @@
 <?php
+
 namespace Ens\JobeetBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -624,7 +625,7 @@ class Job {
      */
     public function setTokenValue() {
         if (!$this->getToken()) {
-            $this->token = sha1($this->getEmail() . rand(11111, 99999));
+            $this->token = sha1($this->getEmail().rand(11111, 99999));
         }
     }
 
