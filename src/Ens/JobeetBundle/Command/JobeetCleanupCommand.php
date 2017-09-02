@@ -10,23 +10,22 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Ens\JobeetBundle\Entity\Job;
 
 class JobeetCleanupCommand extends ContainerAwareCommand {
-	
-	protected function configure()
-	{
-		$this
-		->setName('ens:jobeet:cleanup')
-		->setDescription('Cleanup Jobeet database')
-		->addArgument('days', InputArgument::OPTIONAL, 'The email', 90)
-		;
-	}
-	
-	protected function execute(InputInterface $input, OutputInterface $output)
-	{
-		$days = $input->getArgument('days');
-		
-		$em = $this->getContainer()->get('doctrine')->getEntityManager();
-		$nb = $em->getRepository('EnsJobeetBundle:Job')->cleanup($days);
-		
-		$output->writeln(sprintf('Removed %d stale jobs', $nb));
-	}
+
+    protected function configure() {
+        $this
+                ->setName('ens:jobeet:cleanup')
+                ->setDescription('Cleanup Jobeet database')
+                ->addArgument('days', InputArgument::OPTIONAL, 'The email', 90)
+        ;
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output) {
+        $days = $input->getArgument('days');
+
+        $em = $this->getContainer()->get('doctrine')->getEntityManager();
+        $nb = $em->getRepository('EnsJobeetBundle:Job')->cleanup($days);
+
+        $output->writeln(sprintf('Removed %d stale jobs', $nb));
+    }
+
 }

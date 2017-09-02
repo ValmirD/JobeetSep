@@ -100,5 +100,4 @@ class JobRepository extends \Doctrine\ORM\EntityRepository {
 
         return $job;
     }
-
 }
