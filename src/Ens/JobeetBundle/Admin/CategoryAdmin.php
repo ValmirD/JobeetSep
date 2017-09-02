@@ -36,5 +36,4 @@ class CategoryAdmin extends AbstractAdmin {
                 ->add('slug')
         ;
     }
-
 }
