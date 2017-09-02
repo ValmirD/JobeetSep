@@ -14,7 +14,7 @@ class Jobeet {
 
         // transliterate
         if (function_exists('iconv')) {
-            $text = iconv('UTF-8', 'ISO-8859-1//TRANSLIT//IGNORE', $text);
+            $text = iconv('UTF-8', 'us-ascii//TRANSLIT', $text);
         }
 
         // lowercase
