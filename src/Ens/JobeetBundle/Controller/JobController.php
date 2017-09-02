@@ -1,4 +1,5 @@
 <?php
+
 namespace Ens\JobeetBundle\Controller;
 
 use Ens\JobeetBundle\Entity\Job;

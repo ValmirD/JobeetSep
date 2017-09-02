@@ -45,5 +45,4 @@ class JobType extends AbstractType {
     public function getBlockPrefix() {
         return 'ens_jobeetbundle_job';
     }
-
 }
