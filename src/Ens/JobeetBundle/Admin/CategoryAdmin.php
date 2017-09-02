@@ -9,34 +9,32 @@ use Sonata\AdminBundle\Validator\ErrorElement;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 
-class CategoryAdmin extends AbstractAdmin
-{
-	// setup the default sort column and order
-	protected $datagridValues = array(
-			'_sort_order' => 'ASC',
-			'_sort_by' => 'name'
-	);
-	
-	protected function configureFormFields(FormMapper $formMapper)
-	{
-		$formMapper
-		->add('name')
-		->add('slug')
-		;
-	}
-	
-	protected function configureDatagridFilters(DatagridMapper $datagridMapper)
-	{
-		$datagridMapper
-		->add('name')
-		;
-	}
-	
-	protected function configureListFields(ListMapper $listMapper)
-	{
-		$listMapper
-		->addIdentifier('name')
-		->add('slug')
-		;
-	}
+class CategoryAdmin extends AbstractAdmin {
+
+    // setup the default sort column and order
+    protected $datagridValues = array(
+        '_sort_order' => 'ASC',
+        '_sort_by' => 'name'
+    );
+
+    protected function configureFormFields(FormMapper $formMapper) {
+        $formMapper
+                ->add('name')
+                ->add('slug')
+        ;
+    }
+
+    protected function configureDatagridFilters(DatagridMapper $datagridMapper) {
+        $datagridMapper
+                ->add('name')
+        ;
+    }
+
+    protected function configureListFields(ListMapper $listMapper) {
+        $listMapper
+                ->addIdentifier('name')
+                ->add('slug')
+        ;
+    }
+
 }
