@@ -52,6 +52,8 @@ class JobController extends Controller {
     public function newAction(Request $request) {
         $job = new Job ();
         $job->setType('full-time');
+        //
+        //On affecte l'id le plus bas pour que ça soit automatique le plus qui soit afficher
         $job->getLevelId(1);
 
         $form = $this->createForm('Ens\JobeetBundle\Form\JobType', $job);
