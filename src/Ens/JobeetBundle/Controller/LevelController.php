@@ -26,7 +26,7 @@ class LevelController extends Controller
 
         $levels = $em->getRepository('EnsJobeetBundle:Level')->findAll();
 
-        return $this->render('level/index.html.twig', array(
+        return $this->render('EnsJobeetBundle:Level:index.html.twig', array(
             'levels' => $levels,
         ));
     }
@@ -51,7 +51,7 @@ class LevelController extends Controller
             return $this->redirectToRoute('ens_level_show', array('id' => $level->getId()));
         }
 
-        return $this->render('level/new.html.twig', array(
+        return $this->render('EnsJobeetBundle:Level:new.html.twig', array(
             'level' => $level,
             'form' => $form->createView(),
         ));
@@ -67,7 +67,7 @@ class LevelController extends Controller
     {
         $deleteForm = $this->createDeleteForm($level);
 
-        return $this->render('level/show.html.twig', array(
+        return $this->render('EnsJobeetBundle:Level:show.html.twig', array(
             'level' => $level,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -91,7 +91,7 @@ class LevelController extends Controller
             return $this->redirectToRoute('ens_level_edit', array('id' => $level->getId()));
         }
 
-        return $this->render('level/edit.html.twig', array(
+        return $this->render('EnsJobeetBundle:Level:edit.html.twig', array(
             'level' => $level,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
