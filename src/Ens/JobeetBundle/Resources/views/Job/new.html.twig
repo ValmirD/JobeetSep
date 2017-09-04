@@ -39,6 +39,13 @@
                     </td>
                 </tr>
                 <tr>
+                    <th>{{ form_label(form.levelId) }}</th>
+                    <td>
+                        {{ form_errors(form.levelId) }}
+                        {{ form_widget(form.levelId) }}
+                    </td>
+                </tr>
+                <tr>
                     <th>{{ form_label(form.type) }}</th>
                     <td>
                         {{ form_errors(form.type) }}
@@ -115,5 +122,5 @@
 
         {{ form_rest(form) }}
     </form>
-        
+
 {% endblock %}

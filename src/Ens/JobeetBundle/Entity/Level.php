@@ -33,6 +33,7 @@ class Level {
      */
     private $jobs;
 
+
     /**
      * Get id
      *
@@ -71,6 +72,10 @@ class Level {
      */
     public function getJobs() {
         return $this->jobs;
+    }
+
+    public function __toString() {
+        return $this->getNom();
     }
 
 }

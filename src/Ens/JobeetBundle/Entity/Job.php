@@ -687,8 +687,8 @@ class Job {
         return true;
     }
 
-    public function isValidLocation($location) {
-        
+    public function __toString() {
+        return $this->getLevelId();
     }
 
 }

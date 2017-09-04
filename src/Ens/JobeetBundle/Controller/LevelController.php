@@ -5,29 +5,29 @@ namespace Ens\JobeetBundle\Controller;
 use Ens\JobeetBundle\Entity\Level;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Level controller.
  *
  * @Route("ens_level")
  */
-class LevelController extends Controller
-{
+class LevelController extends Controller {
+
     /**
      * Lists all level entities.
      *
      * @Route("/", name="ens_level_index")
      * @Method("GET")
      */
-    public function indexAction()
-    {
+    public function indexAction() {
         $em = $this->getDoctrine()->getManager();
 
         $levels = $em->getRepository('EnsJobeetBundle:Level')->findAll();
 
         return $this->render('EnsJobeetBundle:Level:index.html.twig', array(
-            'levels' => $levels,
+                    'levels' => $levels,
         ));
     }
 
@@ -37,8 +37,7 @@ class LevelController extends Controller
      * @Route("/new", name="ens_level_new")
      * @Method({"GET", "POST"})
      */
-    public function newAction(Request $request)
-    {
+    public function newAction(Request $request) {
         $level = new Level();
         $form = $this->createForm('Ens\JobeetBundle\Form\LevelType', $level);
         $form->handleRequest($request);
@@ -52,8 +51,9 @@ class LevelController extends Controller
         }
 
         return $this->render('EnsJobeetBundle:Level:new.html.twig', array(
-            'level' => $level,
-            'form' => $form->createView(),
+                    'level' => $level,
+                    'form' => $form->createView(),
+                    
         ));
     }
 
@@ -63,13 +63,13 @@ class LevelController extends Controller
      * @Route("/{id}", name="ens_level_show")
      * @Method("GET")
      */
-    public function showAction(Level $level)
-    {
+    public function showAction(Level $level) {
         $deleteForm = $this->createDeleteForm($level);
 
         return $this->render('EnsJobeetBundle:Level:show.html.twig', array(
-            'level' => $level,
-            'delete_form' => $deleteForm->createView(),
+                    'level' => $level,
+                    'delete_form' => $deleteForm->createView(),
+                    'entity' => $entity,
         ));
     }
 
@@ -79,8 +79,7 @@ class LevelController extends Controller
      * @Route("/{id}/edit", name="ens_level_edit")
      * @Method({"GET", "POST"})
      */
-    public function editAction(Request $request, Level $level)
-    {
+    public function editAction(Request $request, Level $level) {
         $deleteForm = $this->createDeleteForm($level);
         $editForm = $this->createForm('Ens\JobeetBundle\Form\LevelType', $level);
         $editForm->handleRequest($request);
@@ -92,9 +91,9 @@ class LevelController extends Controller
         }
 
         return $this->render('EnsJobeetBundle:Level:edit.html.twig', array(
-            'level' => $level,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
+                    'level' => $level,
+                    'edit_form' => $editForm->createView(),
+                    'delete_form' => $deleteForm->createView(),
         ));
     }
 
@@ -104,8 +103,7 @@ class LevelController extends Controller
      * @Route("/{id}", name="ens_level_delete")
      * @Method("DELETE")
      */
-    public function deleteAction(Request $request, Level $level)
-    {
+    public function deleteAction(Request $request, Level $level) {
         $form = $this->createDeleteForm($level);
         $form->handleRequest($request);
 
@@ -125,12 +123,26 @@ class LevelController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Level $level)
-    {
+    private function createDeleteForm(Level $level) {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('ens_level_delete', array('id' => $level->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
+                        ->setAction($this->generateUrl('ens_level_delete', array('id' => $level->getId())))
+                        ->setMethod('DELETE')
+                        ->getForm()
         ;
     }
+
+    /**
+     *
+     * @Route("/{nom}/jobs", name="ens_level_jobs")
+     * @Method("GET")
+     */
+    public function showJobs(Level $level, $nom) {
+        $em = $this->getDoctrine()->getManager();
+        //on récupère le nom
+        $level = $em->getRepository('EnsJobeetBundle:Level')->findOneByNom($nom);
+           //pas terminé
+        
+
+    }
+
 }
