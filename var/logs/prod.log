@@ -1,0 +1,8 @@
+[2017-09-04 12:46:39] request.INFO: Matched route "ens_job_new". {"route":"ens_job_new","route_parameters":{"_controller":"Ens\\JobeetBundle\\Controller\\JobController::newAction","_route":"ens_job_new"},"request_uri":"http://jobeet.local/job/new","method":"GET"} []
+[2017-09-04 12:46:39] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2017-09-04 12:46:39] app.INFO: Nouveau job créé [] []
+[2017-09-04 12:46:39] app.ERROR: Erreur [] []
+[2017-09-04 17:54:56] request.INFO: Matched route "ens_job_new". {"route":"ens_job_new","route_parameters":{"_controller":"Ens\\JobeetBundle\\Controller\\JobController::newAction","_route":"ens_job_new"},"request_uri":"http://jobeet.local/job/new","method":"GET"} []
+[2017-09-04 17:54:56] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2017-09-04 17:54:56] app.INFO: Nouveau job créé [] []
+[2017-09-04 17:54:56] app.ERROR: Erreur [] []

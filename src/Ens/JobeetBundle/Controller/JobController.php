@@ -70,8 +70,8 @@ class JobController extends Controller {
         }
 
         $logger = $this->get('logger');
-        $logger->info(time() . ' : New Job created.');
-
+        $logger->info('Nouveau job créé');
+        $logger->error('Erreur');
 
 
         return $this->render('EnsJobeetBundle:Job:new.html.twig', array(
