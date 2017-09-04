@@ -148,6 +148,68 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
 
         }
 
+        if (0 === strpos($pathinfo, '/ens_level')) {
+            // ens_level_index
+            if (rtrim($pathinfo, '/') === '/ens_level') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_ens_level_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'ens_level_index');
+                }
+
+                return array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\LevelController::indexAction',  '_route' => 'ens_level_index',);
+            }
+            not_ens_level_index:
+
+            // ens_level_new
+            if ($pathinfo === '/ens_level/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_ens_level_new;
+                }
+
+                return array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\LevelController::newAction',  '_route' => 'ens_level_new',);
+            }
+            not_ens_level_new:
+
+            // ens_level_show
+            if (preg_match('#^/ens_level/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_ens_level_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_level_show')), array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\LevelController::showAction',));
+            }
+            not_ens_level_show:
+
+            // ens_level_edit
+            if (preg_match('#^/ens_level/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_ens_level_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_level_edit')), array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\LevelController::editAction',));
+            }
+            not_ens_level_edit:
+
+            // ens_level_delete
+            if (preg_match('#^/ens_level/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_ens_level_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'ens_level_delete')), array (  '_controller' => 'Ens\\JobeetBundle\\Controller\\LevelController::deleteAction',));
+            }
+            not_ens_level_delete:
+
+        }
+
         // ens_job_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

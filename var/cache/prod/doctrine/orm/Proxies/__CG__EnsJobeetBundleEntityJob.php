@@ -64,10 +64,10 @@ class Job extends \Ens\JobeetBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pr
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'categoryId', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'howToApply', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'isPublic', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'isActivated', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'expiresAt', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'createdAt', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'updatedAt', 'file'];
+            return ['__isInitialized__', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'categoryId', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'levelId', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'howToApply', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'isPublic', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'isActivated', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'expiresAt', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'createdAt', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'updatedAt', 'file'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'categoryId', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'howToApply', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'isPublic', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'isActivated', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'expiresAt', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'createdAt', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'updatedAt', 'file'];
+        return ['__isInitialized__', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'id', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'categoryId', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'levelId', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'type', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'company', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'logo', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'url', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'position', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'location', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'description', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'howToApply', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'token', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'isPublic', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'isActivated', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'email', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'expiresAt', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'createdAt', '' . "\0" . 'Ens\\JobeetBundle\\Entity\\Job' . "\0" . 'updatedAt', 'file'];
     }
 
     /**
@@ -208,6 +208,28 @@ class Job extends \Ens\JobeetBundle\Entity\Job implements \Doctrine\ORM\Proxy\Pr
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCategoryId', [$categoryId]);
 
         return parent::setCategoryId($categoryId);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLevelId()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLevelId', []);
+
+        return parent::getLevelId();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLevelId($levelId)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLevelId', [$levelId]);
+
+        return parent::setLevelId($levelId);
     }
 
     /**
