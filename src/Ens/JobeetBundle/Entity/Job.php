@@ -37,6 +37,16 @@ class Job {
     /**
      * @var string
      *
+     * @ORM\ManyToOne(targetEntity="Level", inversedBy="jobs")
+     * @ORM\JoinColumn(name="level_id", referencedColumnName="id")
+     * 
+     * @Assert\NotBlank()
+     */
+    private $levelId;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="type", type="string", length=255, nullable=true)
      * 
      * @Assert\NotBlank()
@@ -188,6 +198,28 @@ class Job {
      */
     public function setCategoryId($categoryId) {
         $this->categoryId = $categoryId;
+
+        return $this;
+    }
+
+    /**
+     * Get level_id
+     *
+     * @return string
+     */
+    public function getLevelId() {
+        return $this->levelId;
+    }
+
+    /**
+     * Set level_id
+     * 
+     * @param string $levelId
+     *
+     * @return Job
+     */
+    public function setLevelId($levelId) {
+        $this->levelId = $levelId;
 
         return $this;
     }
@@ -625,7 +657,7 @@ class Job {
      */
     public function setTokenValue() {
         if (!$this->getToken()) {
-            $this->token = sha1($this->getEmail().rand(11111, 99999));
+            $this->token = sha1($this->getEmail() . rand(11111, 99999));
         }
     }
 

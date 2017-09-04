@@ -10,8 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="level")
  * @ORM\Entity(repositoryClass="Ens\JobeetBundle\Repository\LevelRepository")
  */
-class Level
-{
+class Level {
+
     /**
      * @var int
      *
@@ -28,14 +28,17 @@ class Level
      */
     private $nom;
 
+    /**
+     * @ var array @ORM\OneToMany(targetEntity="Job", mappedBy="levelId")
+     */
+    private $jobs;
 
     /**
      * Get id
      *
      * @return int
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -46,8 +49,7 @@ class Level
      *
      * @return Level
      */
-    public function setNom($nom)
-    {
+    public function setNom($nom) {
         $this->nom = $nom;
 
         return $this;
@@ -58,9 +60,17 @@ class Level
      *
      * @return string
      */
-    public function getNom()
-    {
+    public function getNom() {
         return $this->nom;
     }
-}
 
+    /**
+     * Get jobs
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getJobs() {
+        return $this->jobs;
+    }
+
+}
