@@ -71,7 +71,7 @@ class JobController extends Controller {
                                 'position' => $job->getPositionSlug()
             )));
         }
-
+        //Pour les evenement ou creation de job, c'est redigier dans un fichier log (voir config_dev et config_prod)
         $logger = $this->get('logger');
         $logger->info('Nouveau job créé');
         $logger->error('Erreur');
